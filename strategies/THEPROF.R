@@ -1,4 +1,12 @@
-# THEPROF.R
+#! THEPROF.R
+
+# Submitted by Barum Park
+#
+# Rules:
+#   1. Cooporate on first ro8und
+#   2. Defect on last round
+#   3. After the 10th round, try to guess whether the oponent is RANDOM (i.e., unresponsive to my past behavior). If so, defect with p = .75
+#   4. Otherwise play TITFORTAT
 
 THEPROF = function(ego_past, alter_past, ...) {
 
@@ -29,7 +37,7 @@ THEPROF = function(ego_past, alter_past, ...) {
             if (abs(p_coop - p_defe) < .5) {
 
                 u = runif(1)
-                if (u < .75) 
+                if (u < .75)
                     return(0)
 
             }
@@ -41,3 +49,5 @@ THEPROF = function(ego_past, alter_past, ...) {
     }
 
 }
+
+### EOF ###

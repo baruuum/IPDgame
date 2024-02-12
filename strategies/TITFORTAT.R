@@ -1,5 +1,9 @@
 # TITFORTAT.R
 
+# DEFAULT STRATEGY
+#   1. Cooperate on first turn
+#   2. Copy what the opponent did last turn
+
 TITFORTAT = function(ego_past, alter_past, ...) {
 
     dots = list(...)
@@ -16,3 +20,5 @@ TITFORTAT = function(ego_past, alter_past, ...) {
     }
 
 }
+
+### EOF ###
