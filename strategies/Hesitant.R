@@ -15,14 +15,17 @@ Hesitant = function(ego_past, alter_past, ...) {
 
     if (current_round == 1 || current_round == 2) {
 
+        # cooporate on first two rounds
         return(1)
 
     } else if (current_round == n_rounds) {
 
+        # defect on last round
         return(0)
 
     } else {
 
+        # copy opponents behavior of last round
         return(alter_past[current_round - 1])
 
     }

@@ -11,10 +11,12 @@ TITFORTAT = function(ego_past, alter_past, ...) {
 
     if (current_round == 1) {
 
+        # cooperate in first round
         return(1)
 
     } else {
 
+        # copy opponents behavior of last round
         return(alter_past[current_round - 1])
 
     }

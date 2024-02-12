@@ -5,6 +5,7 @@
 
 RANDOM = function(ego_past, alter_past, ...) {
 
+    # randomly choose between cooperation and defection
     sample(c(1, 0), 1L)
 
 }
