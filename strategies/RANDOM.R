@@ -1,7 +1,7 @@
 # RANDOM.R
 
 # DEFAULT STRATEGY
-#   1. randomly cooporate/defect
+#   1. randomly cooperate/defect
 
 RANDOM = function(ego_past, alter_past, ...) {
 

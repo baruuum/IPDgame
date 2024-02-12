@@ -15,7 +15,7 @@ Hesitant = function(ego_past, alter_past, ...) {
 
     if (current_round == 1 || current_round == 2) {
 
-        # cooporate on first two rounds
+        # cooperate on first two rounds
         return(1)
 
     } else if (current_round == n_rounds) {
