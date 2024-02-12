@@ -14,45 +14,44 @@
 #   7. Rounds 32-35: Tit for tat
 #   8. Round 36-50: if opponent play D more than or equal to C in rounds 31-35, play tit for tat for the rest of the game; If opponent play C more than D in rounds 31-35, play tit for two tats for the rest of the game
 
-# helper function
-eval_response = function(alter_past, current_round, eval_period) {
+TITfor1.5TAT = function(ego_past, alter_past, ...) {
 
-    # get opponents past defections and cooperations for evaluation period
-    past = alter_past[eval_period]
+    # helper function
+    eval_response = function(alter_past, current_round, eval_period) {
 
-    # past cooperations/defections in evaluation period (note: cooperation is coded as 1, defection as 0)
-    past_c = sum(past)
-    past_d = sum(1 - past)
+        # get opponents past defections and cooperations for evaluation period
+        past = alter_past[eval_period]
 
-    if (past_d >= past_c) {
+        # past cooperations/defections in evaluation period (note: cooperation is coded as 1, defection as 0)
+        past_c = sum(past)
+        past_d = sum(1 - past)
 
-        # if more D than C, TfT
-        return(alter_past[current_round - 1])
+        if (past_d >= past_c) {
 
-    } else {
-
-        # if more C than D, Tf2T
-        short_past = alter_past[c(current_round - 1:2)]
-
-        if (sum(short_past) == 0) {
-
-            return(0)
+            # if more D than C, TfT
+            return(alter_past[current_round - 1])
 
         } else {
 
-            return(1)
+            # if more C than D, Tf2T
+            short_past = alter_past[c(current_round - 1:2)]
+
+            if (sum(short_past) == 0) {
+
+                return(0)
+
+            } else {
+
+                return(1)
+
+            }
 
         }
 
     }
 
-}
-
-TITfor1.5TAT = function(ego_past, alter_past, ...) {
-
     dots = list(...)
     current_round = dots$current_round
-    n_rounds = dots$n_rounds
 
     if (current_round == 1) {
 
