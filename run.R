@@ -51,7 +51,7 @@ if (!exists("the_game"))
 results = lapply(seq_len(n_iter), function(w) {
 
     message("\n\nIteration ", w, " of tournament --------------------------")
-    roundrobin(strategies, n_rounds, payoff, verbose = TRUE, pause = .25)
+    roundrobin(strategies, n_rounds, payoff, verbose = TRUE, pause = .5)
 
 })
 
