@@ -26,11 +26,11 @@ roundrobin = function(strategies, n_rounds, payoff, verbose, pause = 0) {
             p2 = sum(res$player2$payoff)
 
             if (p1 > p2) {
-                rr = paste0(w[1], " WINS! (", p1, " pts)")
+                rr = paste0(w[1], " WINS!")
             } else if (p2 > p1) {
-                rr = paste0(w[2], " WINS! (", p2, " pts)")
+                rr = paste0(w[2], " WINS!")
             } else {
-                rr = paste0("DRAW! (", p1, " pts)")
+                rr = paste0("DRAW!")
             }
 
             message(w[1], " vs. ", w[2], " ... ", rr)
