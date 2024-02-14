@@ -1,5 +1,8 @@
 This is a Axelrod-type computer tournament where players play the iterated prisoner's dilemma against each other. 
 
+### Past Winning Strategies
+
+- Spring, 2024: GOB (submitted by Gracelynn Osei-Bosompem)
 
 ### Strategies 
 
