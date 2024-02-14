@@ -16,11 +16,27 @@
 
 TITfor1.5TAT = function(ego_past, alter_past, ...) {
 
-    # helper function
-    eval_response = function(alter_past, current_round, eval_period) {
+    # helper functions
+    test_response = function(alter_past, current_round, test_period) {
+
+        if (current_round == test_period[1]) {
+
+            # cooperate in first round of period
+            return(1)
+
+        } else if (current_round > test_period[1] && current_round <= test_period[5]) {
+
+            # play TfT in the next 4 rounds
+            return(alter_past[current_round - 1])
+
+        }
+
+    }
+
+    eval_response = function(alter_past, current_round, test_period) {
 
         # get opponents past defections and cooperations for evaluation period
-        past = alter_past[eval_period]
+        past = alter_past[test_period]
 
         # past cooperations/defections in evaluation period (note: cooperation is coded as 1, defection as 0)
         past_c = sum(past)
@@ -52,56 +68,28 @@ TITfor1.5TAT = function(ego_past, alter_past, ...) {
 
     dots = list(...)
     current_round = dots$current_round
+    n_rounds = dots$n_rounds
 
-    if (current_round == 1) {
+    # period of test-eval
+    n_period = 15
 
-        # cooperate in first round
-        return(1)
+    # remainder
+    n_cycles = floor(n_rounds / n_period)
+    n_remainder = n_rounds %% n_period
 
-    } else if (current_round > 1 && current_round <= 5) {
+    # get response matrix
+    dt = data.table::data.table(
+        round = seq_len(n_rounds),
+        phase = c(rep(c(rep("test_response", 5), rep("eval_response", 10)), n_cycles), rep("eval_response", n_remainder)),
+        cycle = c(rep(1:n_cycles, each = n_period), rep(n_cycles, n_remainder))
+    )
+    dt[, tstart := min(round), by = cycle]
+    dt[, tend:= min(round) + 4, by = cycle]
 
-        # play TfT in first 5 rounds
-        return(alter_past[current_round - 1])
+    # get response
+    this = dt[round == current_round]
 
-    } else if (current_round >= 6 && current_round <= 15) {
-
-        eval_response(alter_past = alter_past, current_round = current_round, eval_period = 1:5)
-
-    } else if (current_round == 16) {
-
-        # cooperate on round 16
-        return(1)
-
-    } else if (current_round >= 17 && current_round <= 20) {
-
-        # play TfT in rounds 17-20
-        return(alter_past[current_round - 1])
-
-    } else if (current_round >= 21 && current_round <= 30) {
-
-        # evaluate rounds 16-20 and play either TfT or Tf2T
-        eval_response(alter_past = alter_past, current_round = current_round, eval_period = 16:20)
-
-    } else if (current_round == 31) {
-
-        # cooperate on round 31
-        return(1)
-
-    } else if (current_round >= 32 && current_round <= 35) {
-
-        # play TfT in rounds 32-35
-        return(alter_past[current_round - 1])
-
-    } else if (current_round >= 36 && current_round <= 50) {
-
-        # evaluate rounds 31-35 and play either TfT or Tf2T
-        eval_response(alter_past = alter_past, current_round = current_round, eval_period = 31:35)
-
-    } else {
-
-        stop("something missing!")
-
-    }
+    return(get(this[[2]])(alter_past, this[[1]], this[[4]]:this[[5]]))
 
 }
 
