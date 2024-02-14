@@ -1,6 +1,9 @@
 # RANDOM.R
 
-# DEFAULT STRATEGY
+# DEFAULT STRATEGY (added Spring 2024)
+#
+# Description:
+#
 #   1. randomly cooperate/defect
 
 RANDOM = function(ego_past, alter_past, ...) {

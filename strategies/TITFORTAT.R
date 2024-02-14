@@ -1,6 +1,9 @@
 # TITFORTAT.R
 
-# DEFAULT STRATEGY
+# DEFAULT STRATEGY (added Spring 2024)
+#
+# Description:
+#
 #   1. Cooperate on first turn
 #   2. Copy what the opponent did last turn
 

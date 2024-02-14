@@ -1,8 +1,9 @@
 #! TITfor1.5TAT.R
 
-# Submitted by Joice Chen
+# Submitted by Joice Chen (Spring 2024)
 #
-# Rules:
+# Description:
+#
 #   1. Rounds 1-5: Start with cooperation and play Tit for Tat
 #   2. Rounds 6-15: Based on rounds 1-5,
 #       if opponent play D more or equal to C, play tit for tat
@@ -13,6 +14,9 @@
 #   6. Round 31: Cooperate
 #   7. Rounds 32-35: Tit for tat
 #   8. Round 36-50: if opponent play D more than or equal to C in rounds 31-35, play tit for tat for the rest of the game; If opponent play C more than D in rounds 31-35, play tit for two tats for the rest of the game
+# 
+# Notes:
+#   Code was generealized so it works also for more than 50 moves
 
 TITfor1.5TAT = function(ego_past, alter_past, ...) {
 

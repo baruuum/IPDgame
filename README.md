@@ -1,5 +1,8 @@
 This is a Axelrod-type computer tournament where players play the iterated prisoner's dilemma against each other. 
 
+
+### Strategies 
+
 New strategies can be added as `.R` files into the `./strategies` directory. 
 
 1. The strategies should functions with the same name as the file (e.g., if the file name is `RANDOM.R`, the function's name should be `RANDOM`)
@@ -11,10 +14,16 @@ New strategies can be added as `.R` files into the `./strategies` directory.
     1. `n_rounds`: total moves that are played between the players
     2. `current_round`: which move the current one is
 
+
+### Tournaments 
+
 Other tournament structures can be added into the `./tournaments` directory (e.g., playing on a grid or network). 
 
 1. `the_game` function defines prisoner's dilemma
 2. `roundrobin`
+
+
+### Current Rules 
 
 Running the `run.R` file will run the tournament. The current rules are
 
@@ -25,3 +34,7 @@ Running the `run.R` file will run the tournament. The current rules are
     - mutual defection: 1 point,
     - temptation to defect: 5 points,
     - sucker's payoff: 0
+
+### Dependencies
+
+- `data.table (>= 1.14.9)`

@@ -1,6 +1,7 @@
 # Hesitant.R
 
-# Submitted by Eric Sutton
+# Submitted by Eric Sutton (Spring 2024)
+#
 # Description:
 #
 #   1. For the first and second turn, always cooperate

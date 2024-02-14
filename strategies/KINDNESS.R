@@ -1,6 +1,6 @@
 # KINDNESS.R
 
-# Submitted by Anya Coretta English
+# Submitted by Anya Coretta English (Spring 2024)
 # Description:
 #
 #   1. For the first round, cooperate

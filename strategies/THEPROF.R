@@ -1,8 +1,9 @@
-#! THEPROF.R
+# THEPROF.R
 
-# Submitted by Barum Park
+# Submitted by Barum Park (Spring 2024)
 #
-# Rules:
+# Description:
+#
 #   1. Cooperate on first round
 #   2. Defect on last round
 #   3. After the 10th round, try to guess whether the opponent is RANDOM (i.e., unresponsive to my past behavior). If so, defect with p = .75
