@@ -3,10 +3,8 @@
 
 ## Past Winning Strategies
 
-- Spring, 2024: GOB (submitted by Gracelynn Osei-Bosompem)
-- Spring, 2025: Vincent (submitted by James Mars)
-
-(Note: so far, no strategy was able achieve higher scores than `THEPROF`)
+- Spring, 2024: **GOB** (submitted by Gracelynn Osei-Bosompem, Sociology)
+- Spring, 2025: **Vincent** (submitted by James Mars, Economics & Sociology)
 
 <br>
 
@@ -21,7 +19,7 @@ The current rules of the iterated prisoner's dilemma are as follows:
     - mutual defection: 1 point,
     - temptation to defect: 5 points,
     - sucker's payoff: 0
-4. Three strategies are added by default: `TITFORTAT`, `RANDOM`, and `THEPROF`
+4. Three strategies are added by default: `TITFORTAT`, `RANDOM`, and `THEPROF`. If no strategy is able to win against `THEPROF`, `TITFORTAT`, or `RANDOM`, these strategies are iteratively excluded and the tournament rerun. (Unfortunately, no strategy was able to achieve a higher score than `THEPROF` so far.)
 
 <br>
 
