@@ -25,7 +25,7 @@ payoff = c(
 )
 
 # strategies
-strategies = gsub("(.+)\\.R", "\\1", dir("strategies"))
+strategies = gsub("(.+)\\.R", "\\1", grep(".+\\.R", dir("strategies"), value = TRUE))
 n_strategies = length(strategies)
 
 # load all strategies
@@ -50,8 +50,12 @@ if (!exists("the_game"))
 
 results = lapply(seq_len(n_iter), function(w) {
 
-    message("\n\nIteration ", w, " of tournament --------------------------")
-    roundrobin(strategies, n_rounds, payoff, verbose = TRUE, pause = .1)
+    message("\n\nIteration ", w, " of tournament --------------------------\n")
+    res = roundrobin(strategies, n_rounds, payoff, verbose = TRUE, pause = .01)
+
+    Sys.sleep(1)
+
+    return(res)
 
 })
 

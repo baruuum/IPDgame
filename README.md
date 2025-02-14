@@ -3,6 +3,9 @@ This is a Axelrod-type computer tournament where players play the iterated priso
 ### Past Winning Strategies
 
 - Spring, 2024: GOB (submitted by Gracelynn Osei-Bosompem)
+- Spring, 2025: Vincent (submitted by James Mars)
+
+(Note: so far, no strategy was able achieve higher scores than `THEPROF`)
 
 ### Strategies 
 

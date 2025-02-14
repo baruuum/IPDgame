@@ -36,7 +36,7 @@ TheCasualDefector = function(ego_past, alter_past, ...) {
         # proportion with which opponent cooperated
         est_p = mean(alter_past[1:(current_round - 1L)])
         # cooperate with prob est_p
-        return(runif(1) < est_p) 
+        return(as.integer(runif(1) < est_p))
 
     } else {
 
