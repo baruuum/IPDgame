@@ -20,7 +20,8 @@ The current rules of the iterated prisoner's dilemma are as follows:
     - sucker's payoff: 0
 4. Three strategies are added by default: `TITFORTAT`, `RANDOM`, and `THEPROF`
 
-### Log of past tournaments
+### Scoreboard of Past Tournaments
 
-[Spring 2024](https://github.com/baruuum/IPDgame/blob/main/log2024Spring.log)
+[Spring 2024](https://github.com/baruuum/IPDgame/blob/main//logs/log2024Spring.log)
+[Spring 2025](https://github.com/baruuum/IPDgame/blob/main//logs/log2025Spring.log)
 
