@@ -1,13 +1,16 @@
-This is a Axelrod-type computer tournament where players play the iterated prisoner's dilemma against each other. 
 
-### Past Winning Strategies
+<br>
+
+## Past Winning Strategies
 
 - Spring, 2024: GOB (submitted by Gracelynn Osei-Bosompem)
 - Spring, 2025: Vincent (submitted by James Mars)
 
 (Note: so far, no strategy was able achieve higher scores than `THEPROF`)
 
-### Current Rules 
+<br>
+
+## Current Rules 
 
 The current rules of the iterated prisoner's dilemma are as follows:
 
@@ -20,8 +23,10 @@ The current rules of the iterated prisoner's dilemma are as follows:
     - sucker's payoff: 0
 4. Three strategies are added by default: `TITFORTAT`, `RANDOM`, and `THEPROF`
 
-### Scoreboard of Past Tournaments
+<br>
 
-[Spring 2024](https://github.com/baruuum/IPDgame/blob/main//logs/log2024Spring.log)
+## Scoreboard of Past Tournaments
+
+[Spring 2024](https://github.com/baruuum/IPDgame/blob/main//logs/log2024Spring.log) <br>
 [Spring 2025](https://github.com/baruuum/IPDgame/blob/main//logs/log2025Spring.log)
 

@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Evolution of Cooperation Tournament Results
+title: SOC3490 Evolution of Cooperation Tournament Results
 description: >- # this means to ignore newlines until "baseurl:"
   This website stores the results of the Evolution of Cooperation tournament hosted in the course SOC3490 (Micro-Macro Processes) at Cornell University.
 domain: baruuum.github.io
