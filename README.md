@@ -20,12 +20,17 @@ New strategies can be added as `.R` files into the `./strategies` directory.
     1. `n_rounds`: total moves that are played between the players
     2. `current_round`: which move the current one is
 
+### Games
+
+The game that players play are located in the  `./games` directory, currently it contains the file(s):
+
+1. `IPD.R` (iterated prisoner's dilemma)
+
 
 ### Tournaments 
 
-Other tournament structures can be added into the `./tournaments` directory (e.g., playing on a grid or network). 
+Other tournament structures can be added into the `./tournaments` directory (e.g., playing on a grid or network). Currently, the directory contains the file(s):
 
-1. `the_game` function defines prisoner's dilemma
 2. `roundrobin`
 
 
