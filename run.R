@@ -26,11 +26,25 @@ payoff = c(
 
 # strategies
 strategies = gsub("(.+)\\.R", "\\1", grep(".+\\.R", dir("strategies"), value = TRUE))
-n_strategies = length(strategies)
 
 # load all strategies
 for (s in strategies)
     source(file.path("strategies", paste0(s, ".R")))
+
+past_years = grep("[0-9]{4}", dir("strategies"), value = TRUE)
+for (yy in past_years) {
+
+    past_strategies = gsub("(.+)\\.R", "\\1", grep(".+\\.R", dir(file.path("strategies", yy)), value = TRUE))
+
+    for (s in past_strategies)
+        source(file.path("strategies", yy, paste0(s, ".R")))
+    
+    strategies = c(strategies, past_strategies)
+        
+}
+
+stopifnot(all(!duplicated(strategies)))
+n_strategies = length(strategies)
 
 # load tournament structure
 source(file.path("tournaments", "roundrobin.R"))
@@ -51,7 +65,7 @@ if (!exists("the_game"))
 results = lapply(seq_len(n_iter), function(w) {
 
     message("\n\nIteration ", w, " of tournament --------------------------\n")
-    res = roundrobin(strategies, n_rounds, payoff, verbose = TRUE, pause = .01)
+    res = roundrobin(strategies, n_rounds, payoff, verbose = TRUE, pause = .001)
 
     Sys.sleep(1)
 
