@@ -1,6 +1,6 @@
-# ZACH.R
+# ZICHFORZACH.R
 
-# ZACH (Spring 2026)
+# Zach Weiner (Spring 2026)
 #
 # Description:
 #
