@@ -4,7 +4,8 @@
 ## Past Winning Strategies
 
 - Spring, 2024: [**GOB**](https://github.com/baruuum/IPDgame/blob/main/strategies/2024/GOB.R) (submitted by Gracelynn Osei-Bosompem, Sociology)
-- Spring, 2025: [**Vincent**](https://github.com/baruuum/IPDgame/blob/main/strategies/Vincent.R) (submitted by James Mars, Economics & Sociology)
+- Spring, 2025: [**Vincent**](https://github.com/baruuum/IPDgame/blob/main/strategies/2025/Vincent.R) (submitted by James Mars, Economics & Sociology)
+- Spring, 2026: [**ZICHFORZACH**](https://github.com/baruuum/IPDgame/blob/main/strategies/ZICHFORZACH.R) (submitted by Zachary Weiner, Sociology)
 
 <br>
 
@@ -26,5 +27,6 @@ The rules of the iterated prisoner's dilemma are as follows:
 ## Scoreboard of Past Tournaments
 
 [Spring 2024](https://github.com/baruuum/IPDgame/blob/main//logs/log2024Spring.log) <br>
-[Spring 2025](https://github.com/baruuum/IPDgame/blob/main//logs/log2025Spring.log)
+[Spring 2025](https://github.com/baruuum/IPDgame/blob/main//logs/log2025Spring.log) <br>
+[Spring 2026](https://github.com/baruuum/IPDgame/blob/main//logs/log2026Spring.log)
 
