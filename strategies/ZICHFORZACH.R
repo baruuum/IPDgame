@@ -8,7 +8,7 @@
 #   2. Copy what the opponent did last turn
 #   3. Defect on last turn
 
-ZACH = function(ego_past, alter_past, ...) {
+ZICHFORZACH = function(ego_past, alter_past, ...) {
 
     dots = list(...)
     current_round = dots$current_round
