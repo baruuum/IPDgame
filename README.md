@@ -4,6 +4,7 @@ This is a Axelrod-type computer tournament where players play the iterated priso
 
 - Spring, 2024: GOB (submitted by Gracelynn Osei-Bosompem)
 - Spring, 2025: Vincent (submitted by James Mars)
+- Spring, 2026: ?
 
 (Note: so far, no strategy was able achieve higher scores than `THEPROF`)
 

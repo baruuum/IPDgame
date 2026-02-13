@@ -1,13 +1,14 @@
-# TITFORTAT.R
+# ZICHFORZACH.R
 
-# DEFAULT STRATEGY (added Spring 2024)
+# Zach Weiner (Spring 2026)
 #
 # Description:
 #
 #   1. Cooperate on first turn
 #   2. Copy what the opponent did last turn
+#   3. Defect on last turn
 
-TITFORTAT = function(ego_past, alter_past, ...) {
+ZICHFORZACH = function(ego_past, alter_past, ...) {
 
     dots = list(...)
     current_round = dots$current_round
@@ -17,10 +18,15 @@ TITFORTAT = function(ego_past, alter_past, ...) {
         # cooperate in first round
         return(1)
 
-    } else {
+    } else if (current_round < dots$n_rounds) {
 
         # copy opponents behavior of last round
         return(alter_past[current_round - 1])
+
+    } else {
+
+        # defect on last round
+        return(0)
 
     }
 

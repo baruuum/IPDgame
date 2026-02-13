@@ -6,7 +6,7 @@
 #
 #   1. Always defect
 
-frenemies = function(ego_past, alter_past, ...) {
+FRENEMIES = function(ego_past, alter_past, ...) {
 
     return(0)
 

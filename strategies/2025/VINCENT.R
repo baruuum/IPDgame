@@ -1,4 +1,4 @@
-# Vincent.R
+# VINCENT.R
 
 # Submitted by James Mars (Spring 2025)
 #
@@ -10,7 +10,7 @@
 # 4. Round 46-50: cheat every time
 #
 
-Vincent = function(ego_past, alter_past, ...) {
+VINCENT = function(ego_past, alter_past, ...) {
 
     dots = list(...)
     current_round = dots$current_round
