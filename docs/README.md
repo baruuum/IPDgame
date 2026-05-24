@@ -4,7 +4,7 @@
 ## Past Winning Strategies
 
 - Spring, 2024: [**GOB**](https://github.com/baruuum/IPDgame/blob/main/strategies/2024/GOB.R) (submitted by Gracelynn Osei-Bosompem, Sociology)
-- Spring, 2025: [**Vincent**](https://github.com/baruuum/IPDgame/blob/main/strategies/2025/Vincent.R) (submitted by James Mars, Economics & Sociology)
+- Spring, 2025: [**Vincent**](https://github.com/baruuum/IPDgame/blob/main/strategies/2025/VINCENT.R) (submitted by James Mars, Economics & Sociology)
 - Spring, 2026: [**ZICHFORZACH**](https://github.com/baruuum/IPDgame/blob/main/strategies/ZICHFORZACH.R) (submitted by Zachary Weiner, Sociology)
 
 <br>
